@@ -11,7 +11,7 @@ A web application that can help users track the value of their stock portfolio o
 7. Users are able to create an account in the system.
 8. User interfaces look modern and is attractive.
 9. Users can **upload** their previous stock information via csv file upload.
-10. Bug free: Selenium tests for every feature and 100% coverage on all backend files.
+10. Bug free: Cucumber tests for every feature and 100% coverage for JUnit tests on all backend files.
 
 ## Screenshots
 ![Register/Login page](images/register.png "Register/Login")                                            
@@ -19,6 +19,9 @@ A web application that can help users track the value of their stock portfolio o
 ![addStock page](images/addStock.png "addStock") 
 ![portfolio page](images/portfolio.png "portfolio") 
 ![datepicker page](images/datepicker.png "datepicker") 
+
+## To run the web application
+Right-click "run.launch" -> Run As -> "run". It will be hosted on https://localhost:8080.
 
 ## Project contributor
 Yulun Zhang, Jincheng Zhou, Zixuan Li, Yang Li, Changyu Zhu
