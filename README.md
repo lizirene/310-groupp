@@ -24,4 +24,8 @@ A web application that can help users track the value of their stock portfolio o
 Right-click "run.launch" -> Run As -> "run". It will be hosted on https://localhost:8080.
 
 ## Project contributor
-Yulun Zhang, Jincheng Zhou, Zixuan Li, Yang Li, Changyu Zhu
+- Yulun Zhang yulunzha(at)usc(dot)edu
+- Jincheng Zhou jinchenz(at)usc(dot)edu
+- Zixuan Li zixuanli(at)usc(dot)edu
+- Yang Li yli546(at)usc(dot)edu
+- Changyu Zhu changyuz(at)usc(dot)edu
