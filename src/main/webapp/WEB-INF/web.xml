@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         version="2.5"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>Project2</display-name>
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>org.eclipse.jetty.servlet.DefaultServlet</servlet-class>
+        <init-param>
+            <param-name>useFileMappedBuffer</param-name>
+            <param-value>false</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>SigninServlet</servlet-name>
+        <servlet-class>csci310.servlets.SigninServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SigninServlet</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SignupServlet</servlet-name>
+        <servlet-class>csci310.servlets.SignupServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignupServlet</servlet-name>
+        <url-pattern>/signup</url-pattern>
+    </servlet-mapping>
+    <!--  PortfolioReturnStockList-->
+    <servlet>
+        <servlet-name>PortfolioReturnStockList</servlet-name>
+        <servlet-class>csci310.servlets.PortfolioReturnStockList</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PortfolioReturnStockList</servlet-name>
+        <url-pattern>/portfolio/stock-list</url-pattern>
+    </servlet-mapping>
+    <!--  PortfolioReturnStockData-->
+    <servlet>
+        <servlet-name>PortfolioReturnStockData</servlet-name>
+        <servlet-class>csci310.servlets.PortfolioReturnStockData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PortfolioReturnStockData</servlet-name>
+        <url-pattern>/portfolio/stock-data</url-pattern>
+    </servlet-mapping>
+    <!--  PortfolioAddStock-->
+    <servlet>
+        <servlet-name>PortfolioAddStock</servlet-name>
+        <servlet-class>csci310.servlets.PortfolioAddStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PortfolioAddStock</servlet-name>
+        <url-pattern>/portfolio/add-stock</url-pattern>
+    </servlet-mapping>
+    <!--  PortfolioRemoveStock-->
+    <servlet>
+        <servlet-name>PortfolioRemoveStock</servlet-name>
+        <servlet-class>csci310.servlets.PortfolioRemoveStock</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PortfolioRemoveStock</servlet-name>
+        <url-pattern>/portfolio/remove-stock</url-pattern>
+    </servlet-mapping>
+    <!--  PortfolioReturnValueAndIncrease-->
+    <servlet>
+        <servlet-name>PortfolioReturnValueAndIncrease</servlet-name>
+        <servlet-class>csci310.servlets.PortfolioReturnValueAndIncrease</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PortfolioReturnValueAndIncrease</servlet-name>
+        <url-pattern>/portfolio/value-and-increase</url-pattern>
+    </servlet-mapping>
+    <!--  LogoutServlet-->
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>csci310.servlets.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/portfolio/logout</url-pattern>
+    </servlet-mapping>
+    <!--  PortfolioUpload-->
+    <servlet>
+        <servlet-name>PortfolioUpload</servlet-name>
+        <servlet-class>csci310.servlets.PortfolioUpload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PortfolioUpload</servlet-name>
+        <url-pattern>/portfolio/upload</url-pattern>
+    </servlet-mapping>
+    <!--  Make sure that we are using HTTPS protocol-->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>login.jsp</web-resource-name>
+            <url-pattern></url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+
+</web-app>

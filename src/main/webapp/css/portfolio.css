@@ -1,0 +1,129 @@
+/* Title */
+.title-value {
+	font-size: 48px;
+	margin-right: 20px;
+}
+.title-value-text {
+	color: gray;
+}
+.title-value-percentage {
+	font-weight: bold;
+	font-size: 20px;
+	width: 150px;
+}
+.title-addstock {
+	padding-top: 40px;
+}
+
+/* Stock chart */
+.stock-chart {
+	position: relative;
+}
+
+.stock-chart .highcharts-range-selector {
+	background-color: white !important;
+}
+
+#stock-chart-zoom {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 20px;
+	z-index: 50;
+}
+
+#stock-chart-zoom button {
+	border: none;
+	cursor: pointer;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#stock-chart-zoom button:hover {
+	background-color: #e6e6e6;
+}
+
+#stock-chart-zoom button:focus {
+	background-color: #e6ebf5;
+}
+
+/* Stock list */
+.list-header {
+	line-height: 40px;
+}
+.chip {
+	margin-right: 0 !important;
+}
+.stock-list {
+	max-height: 600px;
+}
+.stock-list:hover {
+	overflow-y: auto;
+}
+.stock-item {
+	transition: background-color .2s;
+}
+.stock-item:hover {
+	background-color: rgba(0, 0, 0, .1);
+	transition: background-color .2s;
+}
+.stock-item .chip {
+	transition: background-color .5s;
+}
+.stock-item:hover .chip {
+	background-color: white;
+	transition: background-color .5s;
+}
+.stock-item:active {
+	background-color: rgba(0, 0, 0, .2);
+	transition: background-color .2s;
+}
+.stock-date {
+	padding: 5px;
+	transition: color .3s;
+}
+.stock-item:hover .stock-date {
+	color: black;
+	transition: color .3s;
+}
+.modal {
+	width: 600px;
+}
+
+.fullscreen-loader {
+	z-index: 100000;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 600px) {
+	.modal {
+		width: 90vw;
+	}
+	.title-addstock {
+		padding-top: 15px;
+	}
+
+	#stock-chart-zoom {
+		top: 70px;
+	}
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 1024px) {
+	.highcharts-stocktools-toolbar li>.highcharts-menu-item-title {
+		display: none;
+	}
+	.highcharts-stocktools-toolbar li ul li {
+		width: auto;
+	}
+}
